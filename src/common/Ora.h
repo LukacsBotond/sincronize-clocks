@@ -11,7 +11,7 @@ public:
     Ora(int szamlalo);
     ~Ora();
     void tick();
+    int getTime();
     void changeSzamlalo(int szamlalo);
 };
-
 #endif

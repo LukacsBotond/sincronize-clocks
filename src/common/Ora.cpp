@@ -1,5 +1,5 @@
 #include "Ora.h"
-
+#include <iostream>
 using namespace std;
 
 Ora::Ora(int szamlalo)
@@ -18,11 +18,16 @@ void Ora::changeSzamlalo(int szamlalo){
     this->szamlalo = szamlalo;
 }
 
+int Ora::getTime(){
+    return this->sec;
+}
+
 void Ora::tick(){
     szamlalo--;
     if (szamlalo == 0){
         szamlalo = orgSzamlalo;
         sec++;
+        cout<<sec<<endl;
     }
 }
 
