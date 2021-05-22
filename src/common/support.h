@@ -5,4 +5,5 @@
 
 void initTimer(int milisec);
 void signalAlarm(int signum);
+
 #endif

@@ -8,7 +8,6 @@ void cleanup(void){
     delete timeserver;
 }
 
-
 void signalHandler( int signum ) {
    cout <<"nameSzerv: " << "Interrupt signal (" << signum << ") received.\n";
    // cleanup and close up stuff here  

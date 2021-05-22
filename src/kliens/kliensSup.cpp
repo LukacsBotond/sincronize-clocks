@@ -1,10 +1,18 @@
 #include "./kliensSup.hpp"
+#include "./kliensSync.hpp"
 
 using namespace std;
 
+void signalAlarm(int signum)
+{
+    kliensSinkron->ORA->tick();
+    kliensSinkron->incCounter();
+    kliensSinkron->startSynk();
+}
+
 void cleanup(void){
     cout <<"nameSzerv: "<<"cleanup"<<endl;
-    //delete timeServer;
+    delete kliensSinkron;
 }
 void signalHandler( int signum ) {
    cout <<"nameSzerv: " << "Interrupt signal (" << signum << ") received.\n";

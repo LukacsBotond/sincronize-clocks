@@ -12,6 +12,9 @@ public:
     ~Ora();
     void tick();
     int getTime();
+    int getSzamlalo(){
+        return orgSzamlalo;
+    }
     void changeSzamlalo(int szamlalo);
 };
 #endif
